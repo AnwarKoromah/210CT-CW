@@ -1,21 +1,11 @@
-#Program that removes all the vowels from a string
 
-#word = input("Please enter a string")
-
-#strings are immutable so need to create a new string
-
-#lenOfStr = len(word)
-
-#Create new str(maybe add charcters to list then turn list into string)
-#If first charcter =a,e,i,o,u then remove it
-#If not then add the charcter to the new str
-#For as many times as the string length
-
+"""
 myList = []
 vowels = ["a","e","i","o","u"]
 
 
 a = input("Enter a string")
+lis = list(a)
 
 
 for letter in a:
@@ -23,3 +13,33 @@ for letter in a:
         myList.append(letter)
 
 print("".join(myList))
+
+if str(lis[counter]) not in vowels:
+        myList.append(lis[counter])
+
+    
+    counter = counter + 1
+    print("".join(myList))
+"""
+counter = 0
+eList = []
+
+def removeVowels(lis, counter, eList):
+    vowels = ["a","e","i","o","u"]
+    if counter == len(lis):
+        print("".join(eList))
+    else:
+        if lis[counter] in vowels:
+            counter = counter + 1
+            removeVowels(lis, counter, eList)
+        else:
+            eList.append(lis[counter])
+            counter = counter + 1
+            removeVowels(lis, counter, eList)
+    
+
+a = input("Enter a string")
+b = str(a)
+lis = list(b)
+
+removeVowels(lis, counter, eList)
