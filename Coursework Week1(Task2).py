@@ -1,3 +1,4 @@
+#Calculates the factorial number and stores it in 'factorial'
 def Factorial(factNo):
     factorial = 1
     for i in range(1, factNo + 1):
@@ -5,7 +6,7 @@ def Factorial(factNo):
     return(factorial)
 
 
-#Count number of 0s in the result
+#Count number of 0s in the result from factorial
 def CountZeros(exampleNum)
     exampleNum = factorial
     lis = list(str(exampleNum))
